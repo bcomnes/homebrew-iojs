@@ -1,15 +1,10 @@
 sudo: false
 
-cache:
-  directories: # Cache npm install
-    - ~/.linuxbrew
-
 script:
   - 'if [ ! -d "$DIRECTORY" ]; then git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew ; fi'
   - export PATH="$HOME/.linuxbrew/bin:$PATH"
   - export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
   - export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
   - brew update
-  - brew tap aredridel/homebrew-iojs
-  - brew install aredridel/iojs/iojs
-  - brew test aredridel/iojs/iojs
+  - brew brew install ./Formula/iojs.rb
+  - brew test ./Formula/iojs.rb
