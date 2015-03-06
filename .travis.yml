@@ -5,7 +5,7 @@ cache:
     - ~/.linuxbrew
 
 script:
-  - git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew
+  - 'if [ ! -d "$DIRECTORY" ]; then git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew ; fi'
   - export PATH="$HOME/.linuxbrew/bin:$PATH"
   - export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
   - export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
