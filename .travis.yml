@@ -1,0 +1,6 @@
+os:
+  - osx
+script:
+  - brew update
+  - brew install aredridel/homebrew-iojs/iojs
+  - brew test aredridel/iojs/iojs
