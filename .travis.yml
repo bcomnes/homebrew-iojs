@@ -1,10 +1,11 @@
 script:
+  - sudo apt-get update
   - sudo apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
   - 'if [ ! -d "$DIRECTORY" ]; then git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew ; fi'
   - export PATH="$HOME/.linuxbrew/bin:$PATH"
   - export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
   - export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
   - brew update
-  - brew install ./Formula/iojs.rb
+  - brew install --verbose --debug ./Formula/iojs.rb
   - brew test ./Formula/iojs.rb
   - brew cleanup
