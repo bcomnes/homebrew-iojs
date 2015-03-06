@@ -1,4 +1,7 @@
 # homebrew-iojs
+
+[![Build Status](https://travis-ci.org/bcomnes/homebrew-iojs.svg)](https://travis-ci.org/bcomnes/homebrew-iojs)
+
 A Homebrew formula for https://iojs.org.  Includes the following `iojs` compatibility patches to `npm`:
 
 - https://github.com/iojs/io.js/commit/82227f3 deps: make node-gyp fetch tarballs from iojs.org
