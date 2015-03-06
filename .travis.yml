@@ -1,5 +1,9 @@
 sudo: false
 
+cache:
+  directories: # Cache npm install
+    - ~/.linuxbrew
+
 script:
   - 'if [ ! -d "$DIRECTORY" ]; then git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew ; fi'
   - export PATH="$HOME/.linuxbrew/bin:$PATH"
@@ -8,3 +12,4 @@ script:
   - brew update
   - brew install ./Formula/iojs.rb
   - brew test ./Formula/iojs.rb
+  - brew cleanup
