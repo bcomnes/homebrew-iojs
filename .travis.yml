@@ -6,5 +6,5 @@ script:
   - export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
   - export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
   - brew update
-  - brew brew install ./Formula/iojs.rb
+  - brew install ./Formula/iojs.rb
   - brew test ./Formula/iojs.rb
